@@ -31,14 +31,14 @@
       <HPET enabled="false"/>
       <Chipset type="PIIX3"/>
       <Boot>
-        <Order position="1" device="Floppy"/>
-        <Order position="2" device="DVD"/>
-        <Order position="3" device="HardDisk"/>
+        <Order position="1" device="DVD"/>
+        <Order position="2" device="HardDisk"/>
+        <Order position="3" device="None"/>
         <Order position="4" device="None"/>
       </Boot>
       <Display VRAMSize="12" monitorCount="1" accelerate3D="false" accelerate2DVideo="false"/>
       <VideoCapture enabled="false" screens="18446744073709551615" horzRes="1024" vertRes="768" rate="512" fps="25"/>
-      <RemoteDisplay enabled="false" authType="Null"/>
+      <RemoteDisplay enabled="false" authType="Null" authTimeout="5000"/>
       <BIOS>
         <ACPI enabled="true"/>
         <IOAPIC enabled="true"/>
@@ -55,19 +55,25 @@
       </USB>
       <Network>
         <Adapter slot="0" enabled="true" MACAddress="080027ACCD44" cable="true" speed="0" type="82540EM">
-          <DisabledModes/>
+          <DisabledModes>
+            <InternalNetwork name="intnet"/>
+            <NATNetwork name="NatNetwork"/>
+          </DisabledModes>
           <NAT>
             <DNS pass-domain="true" use-proxy="false" use-host-resolver="false"/>
             <Alias logging="false" proxy-only="false" use-same-ports="false"/>
           </NAT>
         </Adapter>
-        <Adapter slot="1" enabled="false" MACAddress="08002727AE89" cable="true" speed="0" type="82540EM">
+        <Adapter slot="1" enabled="true" MACAddress="08002727AE89" cable="true" speed="0" type="82540EM">
           <DisabledModes>
             <NAT>
               <DNS pass-domain="true" use-proxy="false" use-host-resolver="false"/>
               <Alias logging="false" proxy-only="false" use-same-ports="false"/>
             </NAT>
+            <InternalNetwork name="intnet"/>
+            <NATNetwork name="NatNetwork"/>
           </DisabledModes>
+          <HostOnlyInterface name="vboxnet0"/>
         </Adapter>
         <Adapter slot="2" enabled="false" MACAddress="08002703F789" cable="true" speed="0" type="82540EM">
           <DisabledModes>
