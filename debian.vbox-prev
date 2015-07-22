@@ -6,7 +6,7 @@
 ** Use VBoxManage or the VirtualBox Manager GUI to make changes.
 -->
 <VirtualBox xmlns="http://www.innotek.de/VirtualBox-settings" version="1.14-macosx">
-  <Machine uuid="{b139511d-c9c3-4cd1-b484-05863f759871}" name="debian" OSType="Debian_64" snapshotFolder="Snapshots" lastStateChange="2015-07-21T10:11:55Z">
+  <Machine uuid="{b139511d-c9c3-4cd1-b484-05863f759871}" name="debian" OSType="Debian_64" snapshotFolder="Snapshots" lastStateChange="2015-07-22T04:50:52Z">
     <MediaRegistry>
       <HardDisks>
         <HardDisk uuid="{e0dd7a92-04c4-497c-8c2c-69632db26274}" location="debian.vdi" format="VDI" type="Normal"/>
@@ -19,6 +19,9 @@
       </DVDImages>
       <FloppyImages/>
     </MediaRegistry>
+    <ExtraData>
+      <ExtraDataItem name="GUI/LastNormalWindowPosition" value="188,214,640,501"/>
+    </ExtraData>
     <Hardware version="2">
       <CPU count="1" hotplug="false">
         <HardwareVirtEx enabled="true"/>
@@ -152,13 +155,13 @@
         <CardReader enabled="false"/>
       </EmulatedUSB>
       <Guest memoryBalloonSize="0"/>
-      <GuestProperties/>
+      <GuestProperties>
+        <GuestProperty name="/VirtualBox/HostInfo/GUI/LanguageID" value="zh_CN" timestamp="1437535086964854000" flags=""/>
+      </GuestProperties>
     </Hardware>
     <StorageControllers>
       <StorageController name="IDE" type="PIIX4" PortCount="2" useHostIOCache="true" Bootable="true">
-        <AttachedDevice passthrough="false" type="DVD" port="1" device="0">
-          <Image uuid="{79106bd8-60fa-4fff-a291-5375277d4402}"/>
-        </AttachedDevice>
+        <AttachedDevice passthrough="false" type="DVD" port="1" device="0"/>
       </StorageController>
       <StorageController name="SATA" type="AHCI" PortCount="4" useHostIOCache="false" Bootable="true" IDE0MasterEmulationPort="0" IDE0SlaveEmulationPort="1" IDE1MasterEmulationPort="2" IDE1SlaveEmulationPort="3">
         <AttachedDevice type="HardDisk" port="0" device="0">
