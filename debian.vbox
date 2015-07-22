@@ -14,7 +14,9 @@
         <HardDisk uuid="{b4071dfe-d41b-4d24-9a41-d9d64b0e77e1}" location="tmp.vdi" format="VDI" type="Normal"/>
         <HardDisk uuid="{96a4dbcf-fea0-401c-bce0-12a90665e9f8}" location="home.vdi" format="VDI" type="Normal"/>
       </HardDisks>
-      <DVDImages/>
+      <DVDImages>
+        <Image uuid="{79106bd8-60fa-4fff-a291-5375277d4402}" location="/Volumes/data/soft/debian-8.1.0-amd64-netinst.iso"/>
+      </DVDImages>
       <FloppyImages/>
     </MediaRegistry>
     <Hardware version="2">
@@ -154,7 +156,9 @@
     </Hardware>
     <StorageControllers>
       <StorageController name="IDE" type="PIIX4" PortCount="2" useHostIOCache="true" Bootable="true">
-        <AttachedDevice passthrough="false" type="DVD" port="1" device="0"/>
+        <AttachedDevice passthrough="false" type="DVD" port="1" device="0">
+          <Image uuid="{79106bd8-60fa-4fff-a291-5375277d4402}"/>
+        </AttachedDevice>
       </StorageController>
       <StorageController name="SATA" type="AHCI" PortCount="4" useHostIOCache="false" Bootable="true" IDE0MasterEmulationPort="0" IDE0SlaveEmulationPort="1" IDE1MasterEmulationPort="2" IDE1SlaveEmulationPort="3">
         <AttachedDevice type="HardDisk" port="0" device="0">
