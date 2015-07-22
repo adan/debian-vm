@@ -8,13 +8,15 @@
 <VirtualBox xmlns="http://www.innotek.de/VirtualBox-settings" version="1.14-macosx">
   <Machine uuid="{b139511d-c9c3-4cd1-b484-05863f759871}" name="debian" OSType="Debian_64" snapshotFolder="Snapshots" lastStateChange="2015-07-21T10:11:55Z">
     <MediaRegistry>
-      <HardDisks/>
+      <HardDisks>
+        <HardDisk uuid="{e0dd7a92-04c4-497c-8c2c-69632db26274}" location="debian.vdi" format="VDI" type="Normal"/>
+        <HardDisk uuid="{a9a411d9-9b27-4bd3-952d-7ee9d9c51983}" location="var.vdi" format="VDI" type="Normal"/>
+        <HardDisk uuid="{b4071dfe-d41b-4d24-9a41-d9d64b0e77e1}" location="tmp.vdi" format="VDI" type="Normal"/>
+        <HardDisk uuid="{96a4dbcf-fea0-401c-bce0-12a90665e9f8}" location="home.vdi" format="VDI" type="Normal"/>
+      </HardDisks>
       <DVDImages/>
       <FloppyImages/>
     </MediaRegistry>
-    <ExtraData>
-      <ExtraDataItem name="GUI/FirstRun" value="yes"/>
-    </ExtraData>
     <Hardware version="2">
       <CPU count="1" hotplug="false">
         <HardwareVirtEx enabled="true"/>
@@ -154,7 +156,20 @@
       <StorageController name="IDE" type="PIIX4" PortCount="2" useHostIOCache="true" Bootable="true">
         <AttachedDevice passthrough="false" type="DVD" port="1" device="0"/>
       </StorageController>
-      <StorageController name="SATA" type="AHCI" PortCount="1" useHostIOCache="false" Bootable="true" IDE0MasterEmulationPort="0" IDE0SlaveEmulationPort="1" IDE1MasterEmulationPort="2" IDE1SlaveEmulationPort="3"/>
+      <StorageController name="SATA" type="AHCI" PortCount="4" useHostIOCache="false" Bootable="true" IDE0MasterEmulationPort="0" IDE0SlaveEmulationPort="1" IDE1MasterEmulationPort="2" IDE1SlaveEmulationPort="3">
+        <AttachedDevice type="HardDisk" port="0" device="0">
+          <Image uuid="{e0dd7a92-04c4-497c-8c2c-69632db26274}"/>
+        </AttachedDevice>
+        <AttachedDevice type="HardDisk" port="1" device="0">
+          <Image uuid="{a9a411d9-9b27-4bd3-952d-7ee9d9c51983}"/>
+        </AttachedDevice>
+        <AttachedDevice type="HardDisk" port="2" device="0">
+          <Image uuid="{b4071dfe-d41b-4d24-9a41-d9d64b0e77e1}"/>
+        </AttachedDevice>
+        <AttachedDevice type="HardDisk" port="3" device="0">
+          <Image uuid="{96a4dbcf-fea0-401c-bce0-12a90665e9f8}"/>
+        </AttachedDevice>
+      </StorageController>
     </StorageControllers>
   </Machine>
 </VirtualBox>
