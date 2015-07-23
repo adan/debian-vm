@@ -6,8 +6,10 @@
 ** Use VBoxManage or the VirtualBox Manager GUI to make changes.
 -->
 <VirtualBox xmlns="http://www.innotek.de/VirtualBox-settings" version="1.14-macosx">
-  <Machine uuid="{b139511d-c9c3-4cd1-b484-05863f759871}" name="debian" OSType="Debian_64" snapshotFolder="Snapshots" lastStateChange="2015-07-22T04:50:52Z">
-    <Description>20150722 Install debian 8.1 with ssh server and standard system utilities.</Description>
+  <Machine uuid="{b139511d-c9c3-4cd1-b484-05863f759871}" name="debian" OSType="Debian_64" snapshotFolder="Snapshots" lastStateChange="2015-07-23T05:55:34Z">
+    <Description>20150722 Install debian 8.1 with ssh server and standard system utilities.
+20150722 Install sudo/vim/tmux and GitLab (git/ruby/mysql/nginx).
+20150722 Config eth1 with 192.168.56.111.</Description>
     <MediaRegistry>
       <HardDisks>
         <HardDisk uuid="{e0dd7a92-04c4-497c-8c2c-69632db26274}" location="debian.vdi" format="VDI" type="Normal"/>
@@ -21,8 +23,8 @@
       <FloppyImages/>
     </MediaRegistry>
     <ExtraData>
-      <ExtraDataItem name="GUI/LastGuestSizeHint" value="640,480"/>
-      <ExtraDataItem name="GUI/LastNormalWindowPosition" value="188,214,640,501"/>
+      <ExtraDataItem name="GUI/LastGuestSizeHint" value="1024,768"/>
+      <ExtraDataItem name="GUI/LastNormalWindowPosition" value="811,275,1024,789"/>
       <ExtraDataItem name="GUI/MiniToolBarAlignment" value="bottom"/>
       <ExtraDataItem name="GUI/SaveMountedAtRuntime" value="yes"/>
       <ExtraDataItem name="GUI/ShowMiniToolBar" value="yes"/>
@@ -161,7 +163,7 @@
       </EmulatedUSB>
       <Guest memoryBalloonSize="0"/>
       <GuestProperties>
-        <GuestProperty name="/VirtualBox/HostInfo/GUI/LanguageID" value="zh_CN" timestamp="1437535086964854000" flags=""/>
+        <GuestProperty name="/VirtualBox/HostInfo/GUI/LanguageID" value="zh_CN" timestamp="1437629514248241000" flags=""/>
       </GuestProperties>
     </Hardware>
     <StorageControllers>

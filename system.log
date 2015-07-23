@@ -1,0 +1,18 @@
+System Information
+
+* Services
+Start: sudo service service_name start
+** MySQL
+** nginx
+** redis
+** gitlab
+
+* Logs
+** 2015-07-22
+   Install sudo/vim/tmux
+   Install GitLab
+     build-essential zlib1g-dev libyaml-dev libssl-dev libgdbm-dev
+     libreadline-dev libncurses5-dev libffi-dev curl openssh-server redis-server
+     checkinstall libxml2-dev libxslt-dev libcurl4-openssl-dev libicu-dev logrotate
+     python-docutils pkg-config cmake nodejs
+     git/postfix/ruby/ruby-dev/mysql/nginx
